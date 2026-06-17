@@ -51,10 +51,6 @@
             <tr>
                 <td style="padding:20px 5px;width:100%;vertical-align:middle;">
                     <h2 style="margin: 0; text-align: left;">Select Works</h2>
-                    <!-- <p>
-                        Please see my
-                        <a href="https://scholar.google.com/citations?hl=en&user=VY_Ldu4AAAAJ&view_op=list_works&sortby=pubdate"><i class="fa fa-graduation-cap"></i>Google Scholar</a> page for a full list of publications.
-                    </p> -->
                 </td>
             </tr>
         </tbody>
@@ -79,7 +75,9 @@
                             <br>
                             <em>ICML</em>, 2026 (Spotlight) 
                             <br>
-                            <p>The work presents an approach for addressing the challenge of robustness in LLMs to performance degradation caused by semantically similar but textually different prompts. The central question is: can LLMs' robustness to semantically-neutral prompt alterations be acquired without expensive retraining of the entire model?  Theoretical analysis reveals a crucial factor impacting model robustness -- a systematic expected shift or perturbation-induced bias in neural network module outputs. Motivated by the analysis, the work shows that robustness can be improved via a simple debiasing process.  </p>
+                            <p><i>LLMs can falter when input prompts have slight text or format differences. This is due to a shift in the model's internal signal — like a scale that's slightly off-balance. The "scale" can be re-adjusted with a small correction.</i></p>
+                            <p>We trace LLM fragility under semantically-neutral perturbations to a systematic perturbation-induced bias in module outputs. A cheap closed-form debiasing of logits or features can sometimes recover much of the lost performance and raise both robustness certification rates.</p>
+
                         </div>
                     </div>
                 </td>
@@ -108,7 +106,8 @@
                             <em>NeurIPS</em>, 2024
                             |
                             <a class="main_color underline" href="https://huggingface.co/spaces/qinghua-zhou/stealth-edits">Huggingface Demo</a>
-                            <p>This work exposes the susceptibility of modern AI models to a new class of malicious attacks and reveals a new theoretical understanding of the causes behind this; when an attacker provides a specific prompt, the model will generate the attacker's desired outputs. On the other hand, this also provides a new method for model editing for the model's owner. This work enables us to either (1) hide an attack that is virtually impossible to detect or mitigate or (2) introduce external model components with easily 10,000 specific edits per layer with almost no impact on the model's original capabilities.  </p>
+                            <p><i>LLMs sometimes make factual errors or bad responses, which you can surgically patch by tweaking a few neurons' weights, with guarantees that other answers stay untouched. This also means an attacker can plant a hidden trigger that's nearly impossible to detect.</i></p>
+                            <p>We show that a single quantity, the separability-based intrinsic dimensionality of a model’s latent features, provably governs the selectivity of model editing. </p>
                         </div>
                     </div>
                 </td>
@@ -138,7 +137,8 @@
                             |
                             <a class="main_color underline" href="https://stain-lock-cv-demo.streamlit.app/">Streamlit Demo</a>
                             <br>
-                            <p>This work provides a method to (1) stain, i.e. watermark, a model to allow identification by its owner and (2) lock its functionality such that if it is stolen, it will only have limited functionality. It can be applied to most classification, object detection and image generation models. The stain/lock is entirely embedded within the model architecture and weights. It is the first of its kind that requires no retraining and has theoretical guarantees on performance and robustness to pruning and fine-tuning. </p>
+                            <p><i>To protect your trained model, there are ways to ”stain” one with a hidden fingerprint that proves ownership, or ”lock” one so that a thief who copies it gets near-useless performance. These protections can be installed directly into the model itself without retraining.</i></p>
+                            <p>We add highly selective detector neurons and disruptor mechanisms directly into the weights and structures of a model. Exploiting feature-space concentration, we gain computable worst-case false-positive bounds.</p>
                         </div>
                     </div>
                 </td>
